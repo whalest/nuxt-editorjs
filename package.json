@@ -1,0 +1,39 @@
+{
+  "name": "vue-editorjs-html",
+  "description": "Simple editorjs template skeleton based on vue component",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "url": ""
+  },
+  "scripts": {
+    "dev": "vite",
+    "debug": "DEBUG=vite-plugin-components:* vite",
+    "build": "esno scripts/build.ts",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^4.1.1",
+    "esno": "^0.4.4",
+    "fs-extra": "^9.1.0",
+    "globby": "^11.0.2",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.4"
+  },
+  "devDependencies": {
+    "@editorjs/editorjs": "^2.19.1",
+    "@types/fs-extra": "^9.0.7",
+    "@types/node": "^14.14.31",
+    "@vitejs/plugin-vue": "^1.1.4",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vuedx/typecheck": "^0.6.3",
+    "@vuedx/typescript-plugin-vue": "^0.6.3",
+    "postcss-nested": "^5.0.3",
+    "typescript": "^4.1.5",
+    "vite": "^2.0.1",
+    "vite-plugin-components": "^0.6.14",
+    "vite-plugin-pages": "^0.4.4",
+    "vite-plugin-windicss": "^0.4.4",
+    "windicss": "^2.1.17"
+  }
+}
