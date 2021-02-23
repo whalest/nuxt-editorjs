@@ -1,4 +1,7 @@
+
 # vue-editorjs-html
+
+🚧 WIP
 
 Simple [editorjs](ttps://editorjs.io/) template skeleton based on vue component slots for nuxt
 
