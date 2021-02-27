@@ -13,7 +13,9 @@ export default defineConfig({
   plugins: [
     vue(),
     WindiCSS({
-      safelist: '',
+      preflight: {
+        enableAll: true,
+      },
     }),
     ViteComponents(),
     Pages(),

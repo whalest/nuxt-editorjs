@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col min-h-screen py-5 mx-auto lg:max-w-4xl">
+  <div class="container flex flex-col max-w-4xl min-h-screen py-5 mx-auto">
     <nav class="flex py-5 my-5 space-x-5 text-xl border-b">
       <router-link
         v-for="(it, i) in links"
