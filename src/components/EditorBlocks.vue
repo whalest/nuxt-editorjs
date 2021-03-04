@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue-demi'
 import type { OutputData } from '~/types/index'
 
 export default defineComponent({

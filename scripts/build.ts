@@ -9,7 +9,7 @@ const toNuxtCa = async () => {
   for (const filePath of paths) {
     const context = await readFile(filePath, { encoding: 'utf8' })
 
-    //context.replace(/import { defineComponent } from 'vue'/)
+    //context.replace(/import { defineComponent } from 'vue-demi'/)
 
     console.log(context)
   }

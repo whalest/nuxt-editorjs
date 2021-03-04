@@ -7,17 +7,18 @@ import Pages from 'vite-plugin-pages'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 3020,
+  },
   resolve: {
     alias: [{ find: '~', replacement: path.resolve(__dirname, 'src') }],
   },
   plugins: [
     vue(),
-    WindiCSS({
-      preflight: {
-        enableAll: true,
-      },
-    }),
     ViteComponents(),
     Pages(),
+    WindiCSS({
+      //safelist: 'prose prose-sm m-auto',
+    }),
   ],
 })

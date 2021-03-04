@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue-demi'
 import type { Header } from '~/types'
 
 export default defineComponent({

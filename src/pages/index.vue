@@ -1,14 +1,14 @@
 <template>
   <div>
     <h1>Default</h1>
-    <article class="prose editor-blocks max-w-none">
+    <article class="prose !max-w-none">
       <EditorBlocks :source="blocks" />
     </article>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue-demi'
 import blocksData from '~/assets/blocks.json'
 
 export default defineComponent({

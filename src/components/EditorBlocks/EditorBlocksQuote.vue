@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, toRef, toRefs } from 'vue'
+import { ref, defineComponent, toRef, toRefs } from 'vue-demi'
 import { Quote } from '~/types'
 
 export default defineComponent({
