@@ -1,21 +1,17 @@
 <template>
   <div>
     <div class="container flex flex-col !max-w-4xl min-h-screen py-5 mx-auto">
-      <nav class="flex py-5 my-5 space-x-5 text-xl border-b">
-        <router-link
-          v-for="(it, i) in links"
-          :key="i"
-          :to="it.link"
-          v-html="it.text"
-        ></router-link>
-      </nav>
-      <router-view />
+      <h1>Default</h1>
+      <article class="prose !max-w-none">
+        <EditorBlocks :source="blocks" />
+      </article>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue-demi'
+import blocksData from './public/blocks.json'
 
 export default defineComponent({
   name: 'App',
@@ -25,7 +21,9 @@ export default defineComponent({
       { link: '/nuxt', text: 'Nuxt' },
     ])
 
-    return { links }
+    const blocks = ref(blocksData)
+
+    return { links, blocks }
   },
 })
 </script>

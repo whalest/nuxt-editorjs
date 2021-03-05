@@ -1,13 +1,8 @@
 import { createApp } from 'vue-demi'
-import { createRouter, createWebHistory } from 'vue-router'
 
-import routes from 'pages-generated'
 import App from './App.vue'
 import 'windi.css'
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-})
+import EditorjsOutput from './index'
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(EditorjsOutput).mount('#app')
