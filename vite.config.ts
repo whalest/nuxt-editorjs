@@ -7,17 +7,17 @@ import ts from 'rollup-plugin-typescript2'
 
 export default defineConfig({
   server: {
-    port: 3020,
+    port: 3020
   },
   resolve: {
-    alias: [{ find: '~', replacement: path.resolve(__dirname, 'src') }],
+    alias: [{ find: '~', replacement: path.resolve(__dirname, 'src') }]
   },
   plugins: [
     vue(),
     WindiCSS({
-      safelist: 'prose prose-sm m-auto',
-    }),
-    {
+      safelist: 'prose prose-sm m-auto'
+    })
+    /* {
       apply: 'build',
       ...ts({
         tsconfig: './tsconfig.json',
@@ -25,12 +25,12 @@ export default defineConfig({
         useTsconfigDeclarationDir: true,
         //exclude: ['main.ts'],
       }),
-    },
+    }, */
   ],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index'),
-      name: 'vue-editorjs-blocks',
+      name: 'vue-editorjs-blocks'
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
@@ -41,9 +41,9 @@ export default defineConfig({
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          vue: 'Vue',
-        },
-      },
-    },
-  },
+          vue: 'Vue'
+        }
+      }
+    }
+  }
 })

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="data">
+  <div>
     <template v-if="data.service === 'youtube'">
       <VideoYoutube class="aspect-w-16 aspect-h-9" :url="data.source" />
     </template>
@@ -17,12 +17,12 @@ export default defineComponent({
   props: {
     data: {
       type: Object as PropType<Partial<Embed>>,
-      default: () => ({}),
-    },
+      default: () => ({})
+    }
   },
   setup() {
     return {}
-  },
+  }
 })
 </script>
 

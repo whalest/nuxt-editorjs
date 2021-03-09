@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.0.5",
-    "vue-editorjs-blocks": "^0.0.1"
+    "vue-editorjs-blocks": "^0.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",
