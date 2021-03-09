@@ -3,16 +3,19 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue-demi'
+import { ref, defineComponent, PropType } from 'vue-demi'
 import type { Paragraph } from '~/types'
 
 export default defineComponent({
   props: {
-    data: {} as () => Partial<Paragraph>,
+    data: {
+      type: Object as PropType<Partial<Paragraph>>,
+      default: () => ({})
+    }
   },
   setup() {
     return {}
-  },
+  }
 })
 </script>
 

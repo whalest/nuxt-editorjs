@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue-demi'
-import blocksData from './public/blocks.json'
+import blocksData from '~/public/blocks.json'
 
 export default defineComponent({
   name: 'App',

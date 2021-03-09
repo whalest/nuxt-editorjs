@@ -2,7 +2,7 @@
  * Heading Tool
  * @doc  https://github.com/editor-js/header#output-data
  */
-export type Header = {
+export interface Header {
   /** header's text */
   text: string
   level: 1 | 2 | 3 | 4 | 5 | 6
@@ -11,12 +11,12 @@ export type Header = {
 /** Paragraph's Tool
  * @doc https://github.com/editor-js/paragraph#output-data
  */
-export type Paragraph = {
+export interface Paragraph {
   /** paragraph's text */
   text: string
 }
 
-export type Image = {
+export interface Image {
   /**Uploaded file data. Any data got from backend uploader. Always contain the url property */
   file: {
     url: string
@@ -37,7 +37,7 @@ export type Image = {
  * Provides Quote Blocks
  * @doc https://github.com/editor-js/quote#output-data
  */
-export type Quote = {
+export interface Quote {
   /** quote's text */
   text: string
   /** caption or an author */
@@ -51,7 +51,7 @@ export type Quote = {
  * Provides Block tool for embedded content for the Editor.js. Tool uses Editor.js pasted patterns handling and inserts iframe with embedded content.
  * @doc https://github.com/editor-js/embed#output-data
  */
-export type Embed = {
+export interface Embed {
   /** service unique name  */
   service:
     | 'vimeo'
@@ -86,19 +86,25 @@ export type Embed = {
 }
 
 /** include raw HTML code in your articles. */
-export type Raw = {
+export interface Raw {
   /** raw html */
   html: string
 }
 
 /** This Tool for the Editor.js allows you to add ordered or unordered (bulleted) lists to your article. */
-export type List = {
+export interface List {
   /** type of a list */
-  style: 'ordered' | 'unordered';
+  style: 'ordered' | 'unordered'
 
   /**the array of list's items */
   items: string[]
 }
 
-
-export type PluginsOutputData = Header | Paragraph | Image | Quote | Embed | Raw | List
+export type PluginsOutputData =
+  | Header
+  | Paragraph
+  | Image
+  | Quote
+  | Embed
+  | Raw
+  | List

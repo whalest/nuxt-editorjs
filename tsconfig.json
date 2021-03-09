@@ -11,6 +11,9 @@
     "lib": ["esnext", "dom"],
     "types": ["vite/client", "vite-plugin-pages/client", "fs-extra"],
     "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
     "paths": {
       "~/*": ["src/*"]
     }
@@ -20,7 +23,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "play/shims-vue.d.ts",
-    "play/main.ts"
+    "src/shims-vue.d.ts",
+    "src/main.ts"
   ]
 }

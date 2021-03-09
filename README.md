@@ -1,5 +1,4 @@
-
-# vue-editorjs-html
+# vue-editorjs-blocks
 
 🚧 WIP
 

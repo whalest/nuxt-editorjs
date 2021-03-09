@@ -11,12 +11,15 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, toRef, toRefs } from 'vue-demi'
+import { ref, defineComponent, toRef, toRefs, PropType } from 'vue-demi'
 import { Quote } from '~/types'
 
 export default defineComponent({
   props: {
-    data: {} as () => Partial<Quote>,
+    data: {
+      type: Object as PropType<Partial<Quote>>,
+      default: () => ({})
+    }
   },
   setup(props) {
     const { data } = toRefs(props)
@@ -24,7 +27,7 @@ export default defineComponent({
     const caption = data?.value?.caption || null
 
     return { caption }
-  },
+  }
 })
 </script>
 

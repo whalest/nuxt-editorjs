@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 
-import typescript2 from 'rollup-plugin-typescript2'
+import ts from 'rollup-plugin-typescript2'
 
 export default defineConfig({
   server: {
@@ -13,25 +13,29 @@ export default defineConfig({
     alias: [{ find: '~', replacement: path.resolve(__dirname, 'src') }],
   },
   plugins: [
-    {
-      ...typescript2(),
-      apply: 'build',
-    },
     vue(),
     WindiCSS({
-      //safelist: 'prose prose-sm m-auto',
+      safelist: 'prose prose-sm m-auto',
     }),
+    {
+      apply: 'build',
+      ...ts({
+        tsconfig: './tsconfig.json',
+        check: false,
+        useTsconfigDeclarationDir: true,
+        //exclude: ['main.ts'],
+      }),
+    },
   ],
   build: {
-    sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index'),
-      name: 'vue-editorjs-output',
+      name: 'vue-editorjs-blocks',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['vue'],
+      external: ['vue', 'main'],
       output: {
         exports: 'named',
         // Provide global variables to use in the UMD build

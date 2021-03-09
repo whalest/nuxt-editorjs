@@ -1,7 +1,9 @@
 import { App } from 'vue'
 import c from './components'
 
-const install = (Vue: App) => {
+export * from './types'
+
+export const install = (Vue: App) => {
   const components = [c]
   for (const component in components) {
     Vue.component(components[component].name, components[component])

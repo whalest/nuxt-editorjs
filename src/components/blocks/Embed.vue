@@ -4,18 +4,21 @@
       <VideoYoutube class="aspect-w-16 aspect-h-9" :url="data.source" />
     </template>
     <template v-else>
-      <div v-html="data.source"></div>
+      <div v-html="data.source" />
     </template>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi'
-import type { Embed } from '~/types'
+import { defineComponent, PropType } from 'vue-demi'
+import { Embed } from '~/types'
 
 export default defineComponent({
   props: {
-    data: {} as () => Partial<Embed>,
+    data: {
+      type: Object as PropType<Partial<Embed>>,
+      default: () => ({}),
+    },
   },
   setup() {
     return {}

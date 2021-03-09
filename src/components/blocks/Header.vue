@@ -1,5 +1,5 @@
 <template>
-  <component v-if="data" :is="`h${data.level}`" v-html="data.text"></component>
+  <component :is="`h${data.level}`" v-html="data.text" />
 </template>
 
 <script lang="ts">
@@ -8,11 +8,14 @@ import type { Header } from '~/types'
 
 export default defineComponent({
   props: {
-    data: {} as () => Partial<Header>,
+    data: {
+      type: Object as () => Partial<Header>,
+      default: () => ({})
+    }
   },
   setup() {
     return {}
-  },
+  }
 })
 </script>
 

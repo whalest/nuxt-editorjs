@@ -1,9 +1,9 @@
 <template>
   <slot
+    v-for="({ data, type }, i) in source.blocks"
+    :key="i"
     :name="type"
     :data="data"
-    v-for="({ type, data }, i) in source.blocks"
-    :key="i"
   >
     <Paragraph v-if="type == 'paragraph'" :data="data" />
     <Delimiter v-else-if="type == 'delimiter'" />
@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi'
-import type { OutputData } from '~/types/index'
+import { defineComponent, PropType } from 'vue-demi'
+import { OutputData } from './../types'
 
 import Delimiter from './blocks/Delimiter.vue'
 import Embed from './blocks/Embed.vue'
@@ -39,22 +39,22 @@ export default defineComponent({
     List,
     Paragraph,
     Quote,
-    Raw,
+    Raw
   },
   props: {
     source: {
-      type: Object as () => OutputData,
+      type: Object as PropType<OutputData>,
       default: () => ({
-        blocks: [],
-      }),
-    },
+        blocks: []
+      })
+    }
   },
   setup() {
     const capitalize = (str: string) =>
       `${str.charAt(0).toUpperCase()}${str.slice(1)}`
 
     return { capitalize }
-  },
+  }
 })
 </script>
 

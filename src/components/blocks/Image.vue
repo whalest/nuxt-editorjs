@@ -18,22 +18,25 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, toRef, toRefs } from 'vue-demi'
+import { ref, defineComponent, toRef, toRefs, PropType } from 'vue-demi'
 import { Image } from '~/types'
 
 // TODO: is show caption
 
 export default defineComponent({
   props: {
-    data: {} as () => Partial<Image>,
+    data: {
+      type: Object as PropType<Partial<Image>>,
+      default: () => ({})
+    }
   },
   setup(props) {
     const { data } = toRefs(props)
 
-    const caption = data?.value?.caption || null
+    const caption = data?.value?.caption || ''
 
     return { caption }
-  },
+  }
 })
 </script>
 

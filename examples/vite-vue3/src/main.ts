@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import {} from '../../../dist/vue-editorjs-output.es.js'
+import EditorjsOutput from 'vue-editorjs-blocks'
 
-createApp(App).mount('#app')
+createApp(App).use(EditorjsOutput).mount('#app')
