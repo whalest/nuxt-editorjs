@@ -1,18 +1,21 @@
 {
   "name": "vue-editorjs-blocks",
   "description": "Simple editorjs template skeleton based on vue component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/vue-editorjs-blocks.umd.js",
-  "module": "./dist/vue-editorjs-blocks.es.js",
+  "main": "./dist/vue3/vue-editorjs-blocks.umd.js",
+  "module": "./dist/vue3/vue-editorjs-blocks.es.js",
   "exports": {
-    ".": {
-      "require": "./dist/vue-editorjs-blocks.umd.js",
-      "import": "./dist/vue-editorjs-blocks.es.js"
+    "./": {
+      "require": "./dist/vue3/vue-editorjs-blocks.umd.js",
+      "import": "./dist/vue3/vue-editorjs-blocks.es.js"
+    },
+    "./nuxt": {
+      "import": "./dist/nuxt/vue-editorjs-blocks.js"
     }
   },
   "repository": {
@@ -20,7 +23,7 @@
   },
   "scripts": {
     "dev": "vite serve",
-    "build": "vite build && tsc --build tsconfig.build.json",
+    "build:3": "vite build && tsc --build tsconfig.build.json",
     "debug": "DEBUG=vite-plugin-components:* vite",
     "build:e": "esno scripts/build.ts",
     "serve": "vite preview"

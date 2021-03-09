@@ -28,6 +28,7 @@ export default defineConfig({
     }, */
   ],
   build: {
+    outDir: './dist/vue3',
     lib: {
       entry: path.resolve(__dirname, 'src/index'),
       name: 'vue-editorjs-blocks'

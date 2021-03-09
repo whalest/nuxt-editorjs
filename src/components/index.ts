@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import { App } from 'vue-demi'
 import c from './EditorjsBlocks.vue'
 
 c.install = (Vue: App) => {

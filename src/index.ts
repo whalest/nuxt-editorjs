@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import { App } from 'vue-demi'
 import c from './components'
 
 export * from './types'
@@ -11,4 +11,4 @@ export const install = (Vue: App) => {
 }
 
 export default { install }
-export { default as c } from './components'
+export { default as EditorjsBlocks } from './components'
