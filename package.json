@@ -26,8 +26,6 @@
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^8.2.0",
-    "rollup-plugin-dts": "^2.0.1",
-    "rollup-plugin-typescript2": "^0.30.0",
     "vue-demi": "^0.7.1"
   },
   "peerDependencies": {
@@ -42,21 +40,23 @@
   "devDependencies": {
     "@editorjs/editorjs": "^2.19.1",
     "@types/fs-extra": "^9.0.8",
-    "@types/node": "^14.14.31",
+    "@types/node": "^14.14.32",
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
     "@vuedx/typecheck": "^0.6.3",
     "@vuedx/typescript-plugin-vue": "^0.6.3",
-    "esno": "^0.4.5",
+    "esno": "^0.4.6",
     "fs-extra": "^9.1.0",
     "globby": "^11.0.2",
-    "postcss-nested": "^5.0.4",
-    "typescript": "^4.2.2",
+    "postcss-nested": "^5.0.5",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^1.14.1",
+    "typescript": "^4.2.3",
     "vite": "^2.0.5",
     "vite-plugin-components": "^0.8.0",
-    "vite-plugin-pages": "^0.5.1",
-    "vite-plugin-windicss": "^0.6.5",
+    "vite-plugin-pages": "^0.6.1",
+    "vite-plugin-windicss": "^0.7.1",
     "vue": "^3.0.7",
-    "windicss": "^2.2.6"
+    "windicss": "^2.3.0"
   }
 }

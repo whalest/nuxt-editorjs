@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 
-import typescript from '@rollup/plugin-typescript'
+import typescript2 from 'rollup-plugin-typescript2'
 
 export default defineConfig({
   server: {
@@ -13,11 +13,10 @@ export default defineConfig({
     alias: [{ find: '~', replacement: path.resolve(__dirname, 'src') }],
   },
   plugins: [
-    typescript({
-      lib: ['esnext', 'dom', 'ES2015.Promise', 'ES5'], // , 'es6', 'dom'
-      target: 'es5',
-      noEmitOnError: true,
-    }),
+    {
+      ...typescript2(),
+      apply: 'build',
+    },
     vue(),
     WindiCSS({
       //safelist: 'prose prose-sm m-auto',
